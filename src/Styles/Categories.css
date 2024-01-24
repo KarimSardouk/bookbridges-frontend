@@ -1,0 +1,41 @@
+.body {
+  background-color: #ffe4c4;
+  /* padding: 30px; */
+  height: 180dvh;
+}
+.row{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.catcards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+  .listsss{
+transform: translate(1%,0%);
+}
+.img{
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    margin-top: 10px;
+    margin-left: 20px;
+    transform: translate(-5%,0%);
+}
+.popup-image{
+  display: flex;
+  flex-direction: column;
+
+}
+.open{
+  width: 300px;
+  height: 30px;
+  background: #812222;
+  color: white;
+  border: none;
+  transform: translate(1%,0%);
+  margin-top: 10px;
+  border-radius: 20px;
+}

@@ -1,0 +1,208 @@
+@media (prefers-color-scheme: dark) {
+}
+
+      <div className={`bdy-section ${isDarkMode ? "dark-mode" : "light-mode"}`}>
+        <ul className="ul">
+          <h1 className="title" onClick={handleHome}>
+            BookBridges
+          </h1>
+          <li className="li1">
+            <div className="search">
+              <input
+                placeholder="Search..."
+                type="text"
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+              />
+              <button type="submit">Go</button>
+            </div>
+          </li>
+          <li className="li3">Discover</li>
+          <li className="li4" onClick={handleGenres}>
+            Genres
+          </li>
+          <li className="li5" onClick={handleQuotes}>
+            Quotes
+          </li>
+          <li className="li6" onClick={handleSignIn}>
+            Sign In
+          </li>
+          <li className="li7" onClick={handleSignUp}>
+            Sign Up
+          </li>
+          <li className="li8">
+            <label className="switch">
+              <input type="checkbox" onClick={toggleDarkMode} />
+              <span className="slider"></span>
+            </label>
+          </li>
+        </ul>
+
+
+
+
+          {/* <div className="popup popup2">
+    <h2>Popup 2</h2>
+    <p>This is the second popup.</p>
+    <button onclick="togglePopup('popup2')">Close</button>
+  </div> */}
+
+  {/* <div className="popup popup3">
+    <h2>Popup 3</h2>
+    <p>This is the third popup.</p>
+    <button onclick="togglePopup('popup3')">Close</button>
+  </div> */}
+
+  {/* <div className="overlay" id="overlay" onClick="closeAllPopups()"></div> */}
+
+
+
+
+   const updateQuote = async () => {
+    try {
+      if (!quoteToUpdate) {
+        console.error("No quote selected for updating.");
+        return;
+      }
+
+      const token = sessionStorage.getItem("authToken");
+      const headers = {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      };
+
+      const response = await axios.put(
+        `https://book-bridges-backend.onrender.com/quotes/updateQuote/${quoteToUpdate._id}`,
+        { headers: headers }
+      );
+
+      if (response.status === 200 && response.data.success) {
+        setNotification("Quote updated successfully!");
+
+        // ... (rest of your existing code)
+
+        // Clear the notification after a few seconds
+        setTimeout(() => {
+          setNotification(null);
+        }, 3000); // Adjust the timeout as needed
+        console.log(response.data.message);
+        setPopup2Visible(false);
+        setQuoteToUpdate(null);
+        getAllQuotes();
+      } else {
+        console.error(
+          response.data.message || "Failed to update quote. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error(
+        "Error updating quote",
+        error.response.data,
+        error.response.status
+      );
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+        {/* <div
+        className="updateBook"
+        style={{ display: popup4Visible ? "block" : "none" }}
+      >
+        <div className="input">
+          <label className="input__label">Book title</label>
+          <input
+            className="input__field"
+            type="text"
+            value={updateBookTitle}
+            onChange={(e) => setUpdateBookTitle(e.target.value)}
+          />
+          <p className="input__description">
+            The title must contain a maximum of 32 characters
+          </p>
+        </div>
+        <div className="input">
+          <label className="input__label">Author Name:</label>
+          <input
+            className="input__field"
+            type="text"
+            value={updateAuthorName}
+            onChange={(e) => setUpdateAuthorName(e.target.value)}
+          />
+        </div>
+        <div className="input">
+          <label className="input__label">Genre Name:</label>
+          <input
+            className="input__field"
+            type="text"
+            value={updateGenreName}
+            onChange={(e) => setUpdateGenreName(e.target.value)}
+          />
+        </div>
+        <div className="input">
+          <div className="input">
+            <label className="input__label">Publisher Name:</label>
+            <input
+              className="input__field"
+              type="text"
+              value={updatePublisherName}
+              onChange={(e) => setUpdatePublisherName(e.target.value)}
+            />
+          </div>
+          <div className="input">
+            <label className="input__label">Publication Date:</label>
+            <input
+              className="input__field"
+              type="text"
+              value={updatePublicationDate}
+              onChange={(e) => setUpdatePublicationDate(e.target.value)}
+            />
+          </div>
+          <label className="input__label">Description</label>
+          <textarea
+            className="input__field input__field--textarea"
+            value={updateDescription}
+            onChange={(e) => setUpdateDescription(e.target.value)}
+          ></textarea>
+          <p className="input__description">
+            Give your book a good description so everyone knows what it's for
+          </p>
+        </div>
+        <div className="input">
+          <label className="input__label">Book Rating:</label>
+          <input
+            type="text"
+            className="input__field"
+            value={updateRating}
+            onChange={(e) => setUpdateRating(e.target.value)}
+          />
+        </div>
+        <div className="input">
+          <label className="input__label">Select Image:</label>
+          <input
+            className="input__field"
+            type="file"
+            onChange={(e) => setUpdateImage(e.target.files[0])}
+          />
+          <small className="input__description">Upload an image file.</small>
+        </div>
+        <div className="modal__footer">
+          <button
+            className="button button--primary"
+            type="button"
+            onClick={() => handleUpdateBook(book._id)}
+          >
+            Update Book
+          </button>
+        </div>
+      </div> */}
+
+        `https://book-bridges-backend.onrender.com/books/updateBook/${selectedBookId}`,
+        "https://book-bridges-backend.onrender.com/books/getAll"

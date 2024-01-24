@@ -1,0 +1,25 @@
+// {
+//     "quotes": [
+//       {
+//         "id": 1,
+//         "text": "The only limit to our realization of tomorrow will be our doubts of today.",
+//         "author": "Franklin D. Roosevelt"
+//       },
+//       {
+//         "id": 2,
+//         "text": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+//         "author": "Winston Churchill"
+//       },
+//       {
+//         "id": 3,
+//         "text": "The only way to do great work is to love what you do.",
+//         "author": "Steve Jobs"
+//       },
+//       {
+//         "id": 4,
+//         "text": "In three words I can sum up everything I've learned about life: it goes on.",
+//         "author": "Robert Frost"
+//       }
+//     ]
+//   }
+  

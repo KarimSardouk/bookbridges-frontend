@@ -1,0 +1,72 @@
+.logout{
+  border-radius: 30px;
+  width:  100px;
+  height: 50px;
+  border: none;
+  background-color: #812222;
+  color: white;
+  margin-left: 10px;
+}
+.mylogo{
+  width: 150px;
+  margin: 0 ;
+}
+.bdy-section {
+  background-color: #ffe4c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.next {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #812222;
+  border-radius: 30px;
+  color: white;
+  border: none;
+
+}
+.previous {
+  border: none;
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #812222;
+  border-radius: 30px;
+  color: white;
+}
+.buttons {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 50px 50px 30px 600px;
+  width: 280px;
+  height: 50px;
+  border-radius: 30px;
+}
+.pagestatus{
+  font-size: 18px;
+}
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width:  3em;
+  height: 3em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+   background: #812222;
+  border-radius: 0 15px 0 32px;
+}
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+  font-size: xx-large;
+}

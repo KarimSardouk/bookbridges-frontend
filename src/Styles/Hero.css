@@ -1,0 +1,124 @@
+.paragraphs p{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+  font-size: 45px;
+}
+.explorenow{
+  border: none;
+  background: #812222;
+  color:white;
+  width: 20%;
+  height: 50px;
+  border-radius: 20px;
+  transform: translate(200%,0%);
+}
+.hero-section{
+  width: 100%;
+  height: 70dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bookStack{
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 767px) {
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .hero-section{
+    width: 173%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .bookStack{
+display: none !important;
+
+  }
+  .buttons {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 50px 50px 30px 670px;
+    width: 280px;
+    height: 50px;
+    border-radius: 30px;
+}
+.explorenow{
+  border: none;
+  background: #812222;
+  color:white;
+  width: 20%;
+  height: 50px;
+  border-radius: 20px;
+  transform: translate(208.5%,0%)
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .bdy-section{
+    background-color: #ffe4c4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 1900px;
+  }
+  .buttons {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* margin: 0px 50px 30px 600px; */
+    width: 280px;
+    height: 50px;
+    border-radius: 30px;
+    transform: translate(-120%,-100%)
+}
+  .hero-section{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .paragraphs p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28.5px;
+  }
+  .explorenow{
+    border: none;
+    background: #812222;
+    color:white;
+    width: 25%;
+    height: 50px;
+    border-radius: 20px;
+    transform: translate(155%,0%);
+  }
+  .bookStack{
+display: none;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translate(1.5%,-4%);
+    flex-wrap: wrap;
+}
+}
+/* Desktop Breakpoint */
+@media only screen and (min-width: 992px) {}

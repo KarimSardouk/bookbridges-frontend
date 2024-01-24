@@ -1,0 +1,54 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    transform: translate(0%, 450%);
+  }
+  .bookk-wrapper {
+    width: 150px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .bookk {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.137));
+  }
+  .bookk-wrapper .bookk-page {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    animation: paging 1s linear infinite;
+    transform-origin: left;
+  }
+  @keyframes paging {
+    0% {
+      transform: rotateY(0deg) skewY(0deg);
+    }
+    50% {
+      transform: rotateY(90deg) skewY(-20deg);
+    }
+    100% {
+      transform: rotateY(180deg) skewY(0deg);
+    }
+  }
+  .returntohome{
+    border: none;
+    transform: translate(260%,0%);
+    background-color: #812222;
+    border-radius: 30px;
+    width: 250px;
+    height: 30px;
+text-align: center;
+    color: white;
+  }
+  .errorsection{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }

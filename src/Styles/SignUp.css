@@ -1,0 +1,77 @@
+.main1 {
+  background-image: url("../Images/books image.jpg");
+}
+.body1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe4c4;
+  height: 700px;
+  width: 400px;
+  margin: auto;
+}
+.title1 {
+  text-align: center;
+  font-size: 30px;
+  color: #812222;
+}
+.s-up {
+  text-align: center;
+  font-size: 40px;
+  color: #812222;
+  font-weight: 400;
+}
+.div-img {
+  text-align: center;
+}
+.book-img {
+  width: 200px;
+  height: 200px;
+}
+.input1,
+.input2,
+.input3 {
+  outline: none;
+border: none;
+  background-color: transparent;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.mail {
+  width: 30px;
+  text-align: center;
+}
+.icon-i1 {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid #812222;
+}
+.icon-i2 {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid #812222;
+}
+.icon-i3 {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3px solid #812222;
+}
+.signupbutton {
+  width: 180px;
+  height: 35px;
+  background-color: #812222;
+  color: white;
+  border-radius: 15px;
+}
+.buttonfors-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

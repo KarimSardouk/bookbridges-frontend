@@ -1,0 +1,251 @@
+.bookshelfdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.shelf {
+  margin-top: 70px;
+  border: 10px solid #d9c22c;
+  border-top: 10px solid #d9c22c;
+  border-right: 10px solid #d9c22c;
+  border-bottom: none;
+  width: 70%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #812222;
+}
+.welcome {
+  color: white;
+  font-size: 3em;
+  padding: 30px;
+  width: 2000px;
+}
+.sub {
+  width: 15%;
+  border: none;
+  border-radius: 30px;
+}
+.one {
+  border-bottom: 10px solid #d9c22c;
+  width: 100%;
+  height: 290px;
+  position: relative;
+}
+.one {
+  display: flex;
+}
+
+
+
+.rect1,
+.rect2,
+.rect3,
+.rect4,
+.rect5,
+.rect6,
+.rect7,
+.rect8,
+.rect9 {
+  background-color: #812222;
+  width: 70px;
+  height: 290px;
+}
+
+.op1,
+.op2 {
+  color: black;
+  border: none;
+  width: 100px;
+  height: 30px;
+}
+select {
+  border: none;
+  width: 100px;
+  height: 45px;
+  outline: none;
+  border-radius: 30px;
+  color: black;
+}
+.rect1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffe4c4;
+  color: black;
+  text-align: center;
+  width: 5%;
+    
+}
+.deletefromshelf{
+  border: none;
+  background-color: #812222;
+  color: white;
+  width: 150%;
+  border-radius: 20px;
+  transform: translate(-30%,100%) rotate(-90deg);
+}
+.rect2 {
+  background-color: brown;
+}
+.rect3 {
+  background-color: green;
+}
+.rect4 {
+  background-color: blueviolet;
+}
+.rect5 {
+  background-color: black;
+}
+.rect6 {
+  background-color: antiquewhite;
+}
+.rect7 {
+  background-color: magenta;
+}
+.rect8 {
+  background-color: mediumaquamarine;
+}
+.rect9 {
+  background-color: aqua;
+  border-top-right-radius: 10px;
+}
+.rect1:hover {
+  transform: scale(1.3);
+}
+.rect2:hover {
+  transform: scale(1.3);
+}
+.rect3:hover {
+  transform: scale(1.3);
+}
+.rect4:hover {
+  transform: scale(1.3);
+}
+.rect5:hover {
+  transform: scale(1.3);
+}
+.rect6:hover {
+  transform: scale(1.3);
+}
+.rect7:hover {
+  transform: scale(1.3);
+}
+.rect8:hover {
+  transform: scale(1.3);
+}
+.rect9:hover {
+  transform: scale(1.3);
+}
+.bx bx-home-alt icons home-icon {
+  font-size: 20px;
+}
+.input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.selectashelf {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: white;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #812222;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  color: white !important;
+  border-radius: 5px;
+  background-color: #812222;
+  padding: 20px;
+  transform: translate(0%, 10%);
+  width: 70%;
+  height: auto;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .bookshelfdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+}
+@media screen and(max-width: 520px) {
+  .shelf {
+    margin-top: 70px;
+    border: 10px solid #d9c22c;
+    border-top: 10px solid #d9c22c;
+    border-right: 10px solid #d9c22c;
+    border-bottom: none;
+    width: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #812222;
+  }
+}

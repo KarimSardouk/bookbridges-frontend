@@ -1,0 +1,159 @@
+body {
+  overflow-x: hidden;
+}
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #812222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 30px;
+  color: white;
+}
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.textarea {
+  position: relative;
+  border-radius: 20px;
+  max-width: 640px;
+  max-height: 65px;
+  resize: none;
+}
+.subscribe {
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 25px;
+  border: none;
+  color: #812222;
+}
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.p6,
+.p7,
+.p8,
+.p9,
+.p10,
+.p11 {
+  font-size: 20px;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.allrights {
+  text-align: center;
+  background-color: #812222;
+  height: 30dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .footer {
+    height: 100vh;
+    background-color: #812222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px; /* Adjusted gap value */
+    width: 189%; /* Set to 100vw to match viewport width */
+  }
+
+  .textarea {
+    position: relative;
+    border-radius: 20px;
+    max-width: 280px;
+    max-height: 200px;
+  }
+}
+
+/* sm */
+@media (min-width: 476px) and (max-width: 640px) {
+  .footer {
+    height: 90vh;
+    background-color: #812222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px; /* Adjusted gap value */
+    width: 170vw; /* Set to 100vw to match viewport width */
+  }
+  .textarea {
+    position: relative;
+    border-radius: 20px;
+    max-width: 520px;
+    max-height: 200px;
+  }
+}
+
+/* md */
+@media (min-width: 641px) and (max-width: 767px) {
+  .footer {
+    height: auto;
+    background-color: #812222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px; /* Adjusted gap value */
+    width: 163%; /* Set to 100vw to match viewport width */
+  }
+}
+
+/* lg */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    height: auto;
+    background-color: #812222;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px; /* Adjusted gap value */
+    width: 108%; /* Set to 100vw to match viewport width */
+    overflow-x: hidden;
+  }
+}
+
+/* xl */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .footer {
+    /* Adjust styles as needed */
+  }
+}
+
+/* 2xl */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .footer {
+    /* Adjust styles as needed */
+  }
+}
+
+/* 3xl */
+@media (min-width: 1536px) {
+  .footer {
+    /* Adjust styles as needed */
+  }
+}
