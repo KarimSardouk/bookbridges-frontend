@@ -50,7 +50,17 @@ const Body = () => {
     e.preventDefault();
     navigate("/bookshelf");
   };
+  const handleTwitter = () => {
+    window.location.href = "https://twitter.com"; // Replace with your Twitter URL
+  };
 
+  const handleInstagram = () => {
+    window.location.href = "https://instagram.com"; // Replace with your Instagram URL
+  };
+
+  const handleLinkedin = () => {
+    window.location.href = "https://linkedin.com"; // Replace with your LinkedIn URL
+  };
   useEffect(() => {
     const getAllBooks = async () => {
       try {
@@ -210,8 +220,7 @@ const Body = () => {
         </div>
       </div>
 
-      <footer>
-        <div className="footer">
+      <footer className="footer">
           <div className="categories">
             <h1>Categories</h1>
             <p className="p1">Most popular</p>
@@ -220,17 +229,17 @@ const Body = () => {
             <p className="p4">Thriller</p>
             <p className="p5">Self-Help</p>
             <p className="p6" onClick={handleGenres}>
-              More here{" "}
+              More here
             </p>
           </div>
           <div className="contact-us">
             <h1>Contact Us</h1>
-            <p className="p8">Twitter</p>
-            <p className="p9">Instagram</p>
-            <p className="p10">Linkedin</p>
+            <p className="p8"  onClick={handleTwitter}>Twitter</p>
+            <p className="p9"  onClick={handleInstagram}>Instagram</p>
+            <p className="p10" onClick={handleLinkedin}>Linkedin</p>
           </div>
           <div className="newsletter">
-            <h1>News Letter</h1>
+            <h1>Newsletter</h1>
             <p className="p11">
               Want to receive updates about us? Sign up and we'll keep you
               updated!
@@ -248,7 +257,6 @@ const Body = () => {
               Subscribe
             </button>
           </div>
-        </div>
       </footer>
     </>
   );

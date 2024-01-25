@@ -62,9 +62,9 @@
   flex-direction: row;
   border-bottom: 3px solid #812222;
 }
-/* .col {
-  transform: translate(0%, 10%);
-} */
+.col {
+  transform: translate(0%, 0%);
+}
 .signinbutton {
   width: 200px;
   height: 40px;
@@ -79,8 +79,8 @@
   align-items: center;
   margin-top: 20px;
 }
-.question{
-    text-align: center;
+.question {
+  text-align: center;
   font-size: 14.5px;
   border-bottom: 3px solid #812222;
 }

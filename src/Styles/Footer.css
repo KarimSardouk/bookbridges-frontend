@@ -2,14 +2,14 @@ body {
   overflow-x: hidden;
 }
 .footer {
-  width: 100%;
-  height: auto;
+  width: 1000px;
+  height: 100%;
   background-color: #812222;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-top: 70px;
-}
+  justify-content: space-evenly;
+  transform: translate(-1%,2%);
+} 
 .categories {
   display: flex;
   flex-direction: column;
@@ -60,16 +60,7 @@ body {
   background-color: black;
   color: white;
 }
-.allrights {
-  text-align: center;
-  background-color: #812222;
-  height: 30dvh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10px;
-}
+
 
 /* xs */
 @media (max-width: 475px) {
@@ -81,6 +72,8 @@ body {
     justify-content: space-evenly;
     gap: 10px; /* Adjusted gap value */
     width: 189%; /* Set to 100vw to match viewport width */
+  transform: translate(-1%,2%);
+
   }
 
   .textarea {
@@ -120,20 +113,25 @@ body {
     justify-content: space-evenly;
     gap: 20px; /* Adjusted gap value */
     width: 163%; /* Set to 100vw to match viewport width */
+  transform: translate(-1%,2%);
+
   }
 }
 
 /* lg */
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer {
+    padding-left: 10px;
     height: auto;
     background-color: #812222;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     gap: 20px; /* Adjusted gap value */
-    width: 108%; /* Set to 100vw to match viewport width */
+    width: 100%; /* Set to 100vw to match viewport width */
     overflow-x: hidden;
+  transform: translate(-1%,2%);
+
   }
 }
 
@@ -148,6 +146,17 @@ body {
 @media (min-width: 1280px) and (max-width: 1535px) {
   .footer {
     /* Adjust styles as needed */
+    padding-left: 10px;
+    height: auto;
+    background-color: #812222;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px; /* Adjusted gap value */
+    width: 100%; /* Set to 100vw to match viewport width */
+    overflow-x: hidden;
+  transform: translate(-1%,2%);
+
   }
 }
 
@@ -155,5 +164,15 @@ body {
 @media (min-width: 1536px) {
   .footer {
     /* Adjust styles as needed */
+    height: auto;
+    background-color: #812222;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 280px; /* Adjusted gap value */
+    width: 110%; /*Set to 100vw to match viewport width*/
+    overflow-x: hidden;
+  transform: translate(-1%,2%);
+
   }
 }

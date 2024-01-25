@@ -33,7 +33,7 @@ color: rgba(0,0,0,0.1);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .other-blockquote{
 font-size: 1.4em;
-width:60%;
+width: 65%;
 margin:50px auto;
 font-family:Open Sans;
 font-style:italic;
@@ -72,6 +72,7 @@ margin-top:1em;
   justify-content: center;
   align-items: center;
   flex-wrap:wrap;
+  gap: 20px;
   /* display: inline-flex;
   flex-wrap:wrap; */
 }

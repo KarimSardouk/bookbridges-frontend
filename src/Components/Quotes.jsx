@@ -59,7 +59,7 @@ const Quotes = () => {
         <Header />
         <div className="quotes1">
           {filteredQuotes.map((quote, index) => (
-            <blockquote class="other-blockquote" key={index}>
+            <blockquote className="other-blockquote" key={index}>
               {quote.quote_text}
               <span>{quote.author_of_quote}</span>
             </blockquote>

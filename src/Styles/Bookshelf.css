@@ -35,9 +35,10 @@
   width: 2000px;
 }
 .sub {
-  width: 15%;
+  width: 100px;
   border: none;
   border-radius: 30px;
+  margin-top: 20px;
 }
 .one {
   border-bottom: 10px solid #d9c22c;
@@ -248,4 +249,14 @@ input[type="submit"] {
     border-top-right-radius: 20px;
     background-color: #812222;
   }
+}
+@media only screen and (min-width:360px )and (max-width:767px){
+  .bookshelfdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+}
 }

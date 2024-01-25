@@ -179,7 +179,7 @@
 }
 @media only screen and (max-width: 767px) {
   .header {
-    width: 150%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,6 +190,7 @@
     list-style-type: none;
     text-align: justify;
   }
+
   .bdy-section {
     background-color: #ffe4c4;
     display: flex;

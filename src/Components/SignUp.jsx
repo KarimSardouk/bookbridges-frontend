@@ -6,6 +6,8 @@ import lock from "../Images/icons8-lock-30.png";
 import user from "../Images/icons8-user-30.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
+
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -44,7 +46,15 @@ const SignUp = () => {
         }
       );
       console.log(response);
-      navigate("/");
+      const userId = response.data.data._id; // Assuming the response contains userId 
+      Cookies.set("userEmail", email, { expires: 7 });
+      Cookies.set("userId", userId, { expires: 50 });
+      console.log(response.data.data._id);
+      console.log(userId);
+      console.log(response.data.data, "session");
+      sessionStorage.setItem("authToken", response.data.data);
+      navigate("/", { state: { userId } });
+      navigate("/", { state: { successMessage: "Signed up successfully!" } });
     } catch (error) {
       console.log(error);
     }
