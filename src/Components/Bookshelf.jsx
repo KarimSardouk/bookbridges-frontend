@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/Bookshelf.css";
-import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
+import logo from "../Images/bookbridgeslogo.png";
+
 const Bookshelf = () => {
+  const [searchInputOne, setSearchInputOne] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("authToken") !== null);
   const [notification, setNotification] = useState(null);
   const [inputNine, setInputNine] = useState("");
   const [inputTen, setInputTen] = useState("");
@@ -44,6 +47,24 @@ const Bookshelf = () => {
   const handleHome = (e) => {
     e.preventDefault();
     navigate("/");
+  };
+  const handleGenres = (e) => {
+    e.preventDefault();
+    navigate("/genres");
+  };
+  const handleQuotes = (e) => {
+    e.preventDefault();
+    navigate("/quotes");
+  };
+  const handleBookshelf = (e) => {
+    e.preventDefault();
+    navigate("/bookshelf");
+  };
+  const handleLogout = () => {
+    sessionStorage.removeItem("authToken");
+    // Update the state to trigger a re-render and change the button label
+    setIsLoggedIn(false); 
+    navigate("/login");
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -151,7 +172,44 @@ const Bookshelf = () => {
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"
       />
-      <Header />
+      <div className="header">
+          <a href="">
+            <img className="logo-img" src={logo} alt="" />
+          </a>
+          <a href="#default" className="logo" onClick={handleHome}>
+            BookBridges
+          </a>
+          <a className="active" href="#home" onClick={handleGenres}>
+            Categories
+          </a>
+          <a href="#contact" onClick={handleQuotes}>
+            Quotes
+          </a>
+          <a href="#about" onClick={handleBookshelf}>
+            Bookshelf
+          </a>
+
+          <div className="search">
+            <input
+              className="searchbar"
+              placeholder="Search..."
+              type="text"
+              value={searchInputOne}
+              onChange={(e) => setSearchInputOne(e.target.value)}
+            />
+            <button className="subbutton" type="submit">
+              Go
+            </button>
+          </div>
+          <a href="">
+          <button
+              className="logout"
+              onClick={isLoggedIn ? handleLogout : () => navigate("/login")}
+            >
+              {isLoggedIn ? "LOG OUT" : "LOG IN"}
+            </button>
+          </a>
+        </div>
 
       <div className="bookshelfdiv">
         <div className="container">

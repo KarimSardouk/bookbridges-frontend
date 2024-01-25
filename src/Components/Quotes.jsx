@@ -8,6 +8,7 @@ import "../Styles/Header.css";
 const Quotes = () => {
   const [quotes, setQuotes] = useState([]);
   const [searchInputOne, setSearchInputOne] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("authToken") !== null);
   const navigate = useNavigate();
   const getAllQuotes = async () => {
     try {
@@ -42,8 +43,11 @@ const Quotes = () => {
   };
   const handleLogout = () => {
     sessionStorage.removeItem("authToken");
-    navigate("/");
+    // Update the state to trigger a re-render and change the button label
+    setIsLoggedIn(false); 
+    navigate("/login");
   };
+
   const filteredQuotes = useMemo(() => {
     return quotes.filter(
       (quote) =>
@@ -56,7 +60,44 @@ const Quotes = () => {
   return (
     <div className="part">
       <div className="body">
-        <Header />
+      <div className="header">
+          <a href="">
+            <img className="logo-img" src={logo} alt="" />
+          </a>
+          <a href="#default" className="logo" onClick={handleHome}>
+            BookBridges
+          </a>
+          <a className="active" href="#home" onClick={handleGenres}>
+            Categories
+          </a>
+          <a href="#contact" onClick={handleQuotes}>
+            Quotes
+          </a>
+          <a href="#about" onClick={handleBookshelf}>
+            Bookshelf
+          </a>
+
+          <div className="search">
+            <input
+              className="searchbar"
+              placeholder="Search..."
+              type="text"
+              value={searchInputOne}
+              onChange={(e) => setSearchInputOne(e.target.value)}
+            />
+            <button className="subbutton" type="submit">
+              Go
+            </button>
+          </div>
+          <a href="">
+          <button
+              className="logout"
+              onClick={isLoggedIn ? handleLogout : () => navigate("/login")}
+            >
+              {isLoggedIn ? "LOG OUT" : "LOG IN"}
+            </button>
+          </a>
+        </div>
         <div className="quotes1">
           {filteredQuotes.map((quote, index) => (
             <blockquote className="other-blockquote" key={index}>

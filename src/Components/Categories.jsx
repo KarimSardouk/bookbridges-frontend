@@ -6,13 +6,14 @@ import logo from "../Images/bookbridgeslogo.png";
 import Modal from "../Components/Modal";
 import "../Styles/Modal.css";
 import "../Styles/Categories.css";
-import Header from "../Components/Header";
 const Categories = () => {
   const [Id, setId] = useState(null);
   const [genreName, setGenreName] = useState("");
   const [book, setBook] = useState([]);
   const [searchInputTwo, setSearchInputTwo] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("authToken") !== null);
 
   const navigate = useNavigate();
 
@@ -20,7 +21,10 @@ const Categories = () => {
     // Call the function when the component mounts
     getBookByGenreName();
   }, []);
-
+  const handleQuotes = (e) => {
+    e.preventDefault();
+    navigate("/quotes");
+  };
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -41,7 +45,9 @@ const Categories = () => {
 
   const handleLogout = () => {
     sessionStorage.removeItem("authToken");
-    navigate("/");
+    // Update the state to trigger a re-render and change the button label
+    setIsLoggedIn(false); 
+    navigate("/login");
   };
 
   const handleBookshelf = (e) => {
@@ -69,7 +75,44 @@ const Categories = () => {
   return (
     <>
       <div className="body">
-        <Header />
+      <div className="header">
+          <a href="">
+            <img className="logo-img" src={logo} alt="" />
+          </a>
+          <a href="#default" className="logo" onClick={handleHome}>
+            BookBridges
+          </a>
+          <a className="active" href="#home" onClick={handleGenres}>
+            Categories
+          </a>
+          <a href="#contact" onClick={handleQuotes}>
+            Quotes
+          </a>
+          <a href="#about" onClick={handleBookshelf}>
+            Bookshelf
+          </a>
+
+          <div className="search">
+            <input
+              className="searchbar"
+              placeholder="Search..."
+              type="text"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+            />
+            <button className="subbutton" type="submit">
+              Go
+            </button>
+          </div>
+          <a href="">
+          <button
+              className="logout"
+              onClick={isLoggedIn ? handleLogout : () => navigate("/login")}
+            >
+              {isLoggedIn ? "LOG OUT" : "LOG IN"}
+            </button>
+          </a>
+        </div>
         <h1>Featured Categories</h1>
 
         <div className="catcards">

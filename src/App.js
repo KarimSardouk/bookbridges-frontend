@@ -21,9 +21,7 @@ const App = () => {
           <Route
             path="/"
             element={
-              <ProtectedRoute adminOnly={false}>
                 <Home />
-              </ProtectedRoute>
             }
           />
           <Route path="/login" element={<Login />} />

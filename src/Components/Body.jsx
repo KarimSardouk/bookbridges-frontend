@@ -19,6 +19,7 @@ const Body = () => {
   const [notification, setNotification] = useState(null);
   const [newsletterText, setNewsletterText] = useState(""); // State for the newsletter text
   const [hasMoreBooks, setHasMoreBooks] = useState(true); // New state to track whether there are more books
+  const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("authToken") !== null);
   const navigate = useNavigate();
   const location = useLocation();
   useEffect(() => {
@@ -105,6 +106,8 @@ const Body = () => {
   };  
   const handleLogout = () => {
     sessionStorage.removeItem("authToken");
+    // Update the state to trigger a re-render and change the button label
+    setIsLoggedIn(false); 
     navigate("/login");
   };
   const filteredBooks = useMemo(() => {
@@ -166,8 +169,11 @@ const Body = () => {
             </button>
           </div>
           <a href="">
-            <button className="logout" onClick={handleLogout}>
-              LOG OUT
+          <button
+              className="logout"
+              onClick={isLoggedIn ? handleLogout : () => navigate("/login")}
+            >
+              {isLoggedIn ? "LOG OUT" : "LOG IN"}
             </button>
           </a>
         </div>

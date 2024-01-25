@@ -198,14 +198,14 @@
     justify-content: flex-start;
     height: auto;
   }
-  .cards {
-    width: 150%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: translate(15%, 0%);
-    flex-wrap: wrap;
-  }
+    .cards {
+      width: 150%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translate(15%, 0%);
+      flex-wrap: wrap;
+    }
   .buttons {
     background-color: white;
     display: flex;
