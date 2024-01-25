@@ -58,9 +58,7 @@ const Body = () => {
     window.location.href = "https://instagram.com"; // Replace with your Instagram URL
   };
 
-  const handleLinkedin = () => {
-    window.location.href = "https://linkedin.com"; // Replace with your LinkedIn URL
-  };
+
   useEffect(() => {
     const getAllBooks = async () => {
       try {
@@ -236,7 +234,6 @@ const Body = () => {
             <h1>Contact Us</h1>
             <p className="p8"  onClick={handleTwitter}>Twitter</p>
             <p className="p9"  onClick={handleInstagram}>Instagram</p>
-            <p className="p10" onClick={handleLinkedin}>Linkedin</p>
           </div>
           <div className="newsletter">
             <h1>Newsletter</h1>

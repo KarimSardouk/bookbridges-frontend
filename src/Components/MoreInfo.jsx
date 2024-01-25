@@ -63,7 +63,7 @@ const MoreInfo = () => {
       <button className="handleHome sticky" onClick={handleHome}>
         Return To Home
       </button>
-      <button className="handleHome sticky" onClick={handleCategories}>
+      <button className="sticky" onClick={handleCategories}>
         Go back
         <img src={arrowleft} alt="" />
       </button>
@@ -71,10 +71,10 @@ const MoreInfo = () => {
       {book ? (
         <div className="card">
           <img className="bk-img" src={book.book_image} alt="" />
-          <p className="card-title">
-            <h2>{book.book_title}</h2>
-          </p>
-          <div className="card-body">{renderBookDetails()}</div>
+        
+          <div className="card-body">
+          <h2>{book.book_title}</h2>
+            {renderBookDetails()}</div>
         </div>
       ) : (
         <p>Loading...</p>
