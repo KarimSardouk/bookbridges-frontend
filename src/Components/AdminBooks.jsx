@@ -66,7 +66,11 @@ const AdminBooks = () => {
     };
 
     try {
-      const response = await axios.put(formData, { headers });
+      const response = await axios.put(
+        `https://book-bridges-backend.onrender.com/books/updateBook/${selectedBookId}`,
+        formData,
+        { headers }
+      );
 
       if (response.status === 200 && response.data.success) {
         setNotification("Book updated successfully!");
@@ -117,7 +121,9 @@ const AdminBooks = () => {
   };
   const getAllBooks = async () => {
     try {
-      const response = await axios.get();
+      const response = await axios.get(
+        "https://book-bridges-backend.onrender.com/books/getAll"
+      );
       console.log(response.data);
       setBooks(response.data);
     } catch (error) {
@@ -158,7 +164,8 @@ const AdminBooks = () => {
         Authorization: `Bearer ${token}`,
       };
       // Make the request to the backend API
-      const response = await axios.post("https://book-bridges-backend.onrender.com/books/addBook",
+      const response = await axios.post(
+        "https://book-bridges-backend.onrender.com/books/addBook",
         formData,
         { headers: headers }
       );
@@ -238,7 +245,7 @@ const AdminBooks = () => {
           <div className="menu">
             <ul className="menu-links">
               <li className="nav-link">
-                <a href="#">
+                <a href="/">
                   <i className="bx bx-home-alt icons home-img"></i>
                   <span className="text nav-text" onClick={handleHome}>
                     HOME
@@ -254,7 +261,7 @@ const AdminBooks = () => {
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="/admin/books">
                   <i className="icons1">
                     <img src={book} className="book" alt="book image" />
                   </i>
@@ -264,7 +271,7 @@ const AdminBooks = () => {
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="/admin/quotes">
                   <i className="icons2">
                     <img
                       src={quotations}
@@ -282,7 +289,7 @@ const AdminBooks = () => {
 
           <div className="bottom-content">
             <li className="nav-link">
-              <a href="#">
+            <a href="/login">
                 <i className="bx bx-log-out icons"></i>
                 <span className="text nav-text" onClick={handleLogout}>
                   Log Out

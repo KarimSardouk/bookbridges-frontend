@@ -145,7 +145,7 @@ const AdminUsers = () => {
           <div className="menu">
             <ul className="menu-links">
               <li className="nav-link">
-                <a href="#">
+                <a href="/">
                   <i className="bx bx-home-alt icons home-img"></i>
                   <span className="text nav-text" onClick={handleHome}>
                     HOME
@@ -153,7 +153,7 @@ const AdminUsers = () => {
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="/admin/users">
                   <img src={user} className="user-img" alt="this is a user" />
                   <span className="text nav-text" onClick={handleAdminUsers}>
                     USERS
@@ -161,7 +161,7 @@ const AdminUsers = () => {
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="/admin/books">
                   <i className="icons1">
                     <img src={book} className="book" alt="book image" />
                   </i>
@@ -171,7 +171,7 @@ const AdminUsers = () => {
                 </a>
               </li>
               <li className="nav-link">
-                <a href="#">
+                <a href="/admin/quotes">
                   <i className="icons2">
                     <img
                       src={quotations}
@@ -180,7 +180,6 @@ const AdminUsers = () => {
                     />
                   </i>
                   <span className="text nav-text" onClick={handleAdminQuotes}>
-                    {" "}
                     QUOTES
                   </span>
                 </a>
@@ -190,7 +189,7 @@ const AdminUsers = () => {
 
           <div className="bottom-content">
             <li className="nav-link">
-              <a href="#">
+              <a href="/login">
                 <i className="bx bx-log-out icons"></i>
                 <span className="text nav-text" onClick={handleLogout}>
                   Log Out

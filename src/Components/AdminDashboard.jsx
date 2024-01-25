@@ -39,25 +39,25 @@ const AdminDashboard = () => {
         <div class="menu">
           <ul class="menu-links">
             <li class="nav-link">
-              <a href="#">
+              <a href="/">
                 <i class="bx bx-home-alt icons home-img"></i>
                 <span class="text nav-text" onClick={handleHome}>HOME</span>
               </a>
             </li>
             <li class="nav-link">
-              <a href="#">
+              <a href="/admin/users">
               <img src={user} className="user-img" alt="this is a user" />
                 <span class="text nav-text" onClick={handleAdminUsers}>USERS</span>
               </a>
             </li>
             <li class="nav-link">
-              <a href="#">
+              <a href="/admin/books">
                 <i class="icons1"><img src={book} className="book" alt="book image" /></i>
                 <span class="text nav-text" onClick={handleAdminBooks}>BOOKS</span>
               </a>
             </li>
             <li class="nav-link">
-              <a href="#">
+              <a href="/admin/quotes">
                 <i class="icons2"><img src={quotations} className="quotations-icon" alt="quotations" /></i>
                 <span class="text nav-text" onClick={handleAdminQuotes}>QUOTES</span>
               </a>
@@ -67,7 +67,7 @@ const AdminDashboard = () => {
 
         <div class="bottom-content">
           <li class="nav-link">
-            <a href="#">
+          <a href="/login">
               <i class="bx bx-log-out icons"></i>
               <span class="text nav-text" onClick={handleLogout}>Log Out</span>
             </a>

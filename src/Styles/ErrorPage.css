@@ -39,7 +39,7 @@
   }
   .returntohome{
     border: none;
-    transform: translate(260%,0%);
+    transform: translate(0%,-900%);
     background-color: #812222;
     border-radius: 30px;
     width: 250px;
@@ -50,5 +50,8 @@ text-align: center;
   .errorsection{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
+    
   }

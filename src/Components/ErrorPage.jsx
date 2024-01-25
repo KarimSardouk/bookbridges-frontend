@@ -86,9 +86,9 @@ const ErrorPage = () => {
     </svg>
   </div>
 </div>
-<h1 style={{textAlign:"center"}}>ERROR 404</h1>
-<h2 style={{textAlign:"center",marginBottom:"10px"}}>I'm sorry, it looks like we've ran out of pages. </h2>
-<button className="returntohome" onClick={returnHome}>Return To Home Page</button>
+<h1 style={{textAlign:"center"}}>UNAUTHORIZED ACCESS</h1>
+<h2 style={{textAlign:"center",marginBottom:"10px"}}>I'm sorry, it looks like we've ran out of pages! </h2>
+<button  className="returntohome" onClick={returnHome}> Return To Home Page</button>
 
 </div>
   );
